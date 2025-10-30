@@ -103,8 +103,9 @@ To improve this project further:
 🎓 **Program Studi:** Informatika – Universitas Sultan Ageng Tirtayasa  
 📧 **Email:** [muhammadhafirst@gmail.com](mailto:muhammadhafirst@gmail.com)  
 
+💼 Aspiring **Data Analyst**, passionate about learning from real datasets and building professional data-driven projects.
 
+---
 
-
-
+## 📦 Project Structure  
 
