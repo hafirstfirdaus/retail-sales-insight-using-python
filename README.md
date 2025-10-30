@@ -105,7 +105,5 @@ To improve this project further:
 
 💼 Aspiring **Data Analyst**, passionate about learning from real datasets and building professional data-driven projects.
 
----
 
-## 📦 Project Structure  
 
