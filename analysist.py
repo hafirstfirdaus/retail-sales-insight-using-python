@@ -1,5 +1,5 @@
 # ===============================
-# 📊 Analisis Penjualan Produk
+#  Analisis Penjualan Produk
 # Oleh: Muhammad Hafirst Firdaus
 # ===============================
 
@@ -7,11 +7,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-# 1️⃣ Baca file
+# 1️ Baca file
 file_path = "Project_Analisis_Penjualan_Pertama.xlsx"
 data = pd.read_excel(file_path)
 
-# 2️⃣ Informasi dasar
+# 2️ Informasi dasar
 print("=== 5 Data Pertama ===")
 print(data.head(), "\n")
 
@@ -21,21 +21,21 @@ print(data.info(), "\n")
 print("=== Jumlah Data Kosong ===")
 print(data.isnull().sum(), "\n")
 
-# 3️⃣ Statistik deskriptif
+# 3️ Statistik deskriptif
 print("=== Statistik Deskriptif ===")
 print(data.describe(), "\n")
 
-# 4️⃣ Total dan rata-rata penjualan
+# 4️ Total dan rata-rata penjualan
 if 'Total' in data.columns:
     total_semua = data['Total'].sum()
     rata2 = data['Total'].mean()
     print(f"💰 Total seluruh penjualan: Rp{total_semua:,.0f}")
     print(f"📈 Rata-rata penjualan: Rp{rata2:,.0f}\n")
 
-# 5️⃣ Pastikan folder untuk hasil visualisasi ada
+# 5️ Pastikan folder untuk hasil visualisasi ada
 os.makedirs("hasil_visualisasi", exist_ok=True)
 
-# 6️⃣ Produk terlaris
+# 6️ Produk terlaris
 if 'Jenis Produk' in data.columns and 'Total' in data.columns:
     produk_terlaris = data.groupby('Jenis Produk')['Total'].sum().sort_values(ascending=False)
     print("=== Produk Terlaris ===")
@@ -53,7 +53,7 @@ if 'Jenis Produk' in data.columns and 'Total' in data.columns:
     plt.show()
     plt.close()
 
-# 7️⃣ Tren penjualan per bulan
+# 7️ Tren penjualan per bulan
 if 'Tanggal' in data.columns and 'Total' in data.columns:
     data['Tanggal'] = pd.to_datetime(data['Tanggal'])
     data['Bulan'] = data['Tanggal'].dt.to_period('M')
@@ -74,4 +74,4 @@ if 'Tanggal' in data.columns and 'Total' in data.columns:
     plt.show()
     plt.close()
 
-print("✅ Analisis selesai! Grafik disimpan di folder 'hasil_visualisasi/'.")
+print(" Analisis selesai! Grafik disimpan di folder 'hasil_visualisasi/'.")
